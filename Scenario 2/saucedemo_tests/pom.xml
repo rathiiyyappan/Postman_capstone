@@ -1,0 +1,13 @@
+<!-- Selenium WebDriver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+
+<!-- Apache POI -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.0.0</version>
+</dependency>

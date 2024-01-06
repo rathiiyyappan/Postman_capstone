@@ -1,0 +1,18 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test("Response has success status", function () {
+    pm.response.to.have.jsonBody("status", "success");
+});
+
+pm.test("Response contains data", function () {
+    pm.response.to.have.jsonBody("data");
+});
+
+pm.test("Response data matches expected values", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.data.name).to.eql(pm.variables.get("name"));
+    pm.expect(jsonData.data.salary).to.eql(pm.variables.get("salary"));
+    pm.expect(jsonData.data.age).to.eql(pm.variables.get("age"));
+});
